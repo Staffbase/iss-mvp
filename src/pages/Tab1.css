@@ -1,0 +1,12 @@
+form {
+    padding: 2rem;
+    margin: 2rem;
+  }
+  
+  .formtext {
+    position: relative;
+    top: -48px;
+    background: white;
+    padding: 7px;
+    width: 57px;
+  }
