@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 const port = 443;
+const StaffBaseSSO = require('@staffbase/staffbase-plugin-sdk').sso;
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // TODO: frontent URL

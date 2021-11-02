@@ -3,9 +3,6 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 import { Form, Button } from 'react-bootstrap';
 
-const StaffBaseSSO = require('@staffbase/staffbase-plugin-sdk').sso;
-
-console.log(StaffBaseSSO);
 const Tab1: React.FC = () => {
   return (
     <IonPage>
