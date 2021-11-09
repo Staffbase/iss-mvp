@@ -23,24 +23,44 @@ const Tab1: React.FC = () => {
     <Form.Control type="text" placeholder="John" />
   </Form.Group>
 
+  <br></br>
+
   <Form.Group className="mvp-1" controlId="formBasicLastName">
     <Form.Label>Last Name</Form.Label>
     <Form.Control type="text" placeholder="Doe" />
   </Form.Group>
+
+  <br></br>
 
   <Form.Group className="mvp-1" controlId="formBasicDepartment">
     <Form.Label>Department</Form.Label>
     <Form.Control type="text" placeholder="PreSales" />
   </Form.Group>
 
+  <br></br>
+
   <Form.Group controlId="formBasicFile" className="mvp-1">
     <Form.Label>Approval Document</Form.Label>
     <Form.Control type="file" />
   </Form.Group>
 
-  <Button variant="primary" type="submit">
+  <br></br>
+
+  <style type="text/css">
+    {`
+    .btn-flat {
+      background-color: #030139;
+      color: white;
+    }
+    `}
+  </style>
+
+  <br></br>
+  
+  <Button variant="flat" type="submit">
     Request Changes
   </Button>
+  
 </Form>
       </IonContent>
     </IonPage>

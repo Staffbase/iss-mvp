@@ -32,7 +32,11 @@ const Tab2: React.FC = () => {
   ]}
   options={{
     title: 'Current Salary',
-    pieSliceText: 'value'
+    pieSliceText: 'value',
+    slices: {
+      0: { color: '#030139' },
+      1: { color: '#0583FE' },
+    },
   }}
   rootProps={{ 'data-testid': '1' }}
 />
@@ -47,8 +51,19 @@ const Tab2: React.FC = () => {
   <option value="3">March</option>
 </Form.Select>
 </Form.Group>
-<Button variant="primary" type="submit">
-    Download pdf
+<style type="text/css">
+    {`
+    .btn-flat {
+      background-color: #030139;
+      color: white;
+    }
+    `}
+  </style>
+
+  <br></br>
+  
+  <Button variant="flat" type="submit">
+    Request Changes
   </Button>
   </Form>
       </IonContent>
