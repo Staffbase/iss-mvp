@@ -5,6 +5,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
 
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
+
 
 
 const helpers = require(`@staffbase/staffbase-plugin-sdk`).helpers;
@@ -20,11 +28,6 @@ try {
 }
 
 const StaffBaseSSO = require('@staffbase/staffbase-plugin-sdk').sso;
-
-
-
-
-
 
 //----------------------------JSON ROUTES--------------------------------------------------------------------
 
@@ -64,7 +67,7 @@ app.get('/', function (req, res) {
     // });
 
 
-    app.get('/api/hello', (req, res) => {
+    app.get('/api/hf89wnf89hw938h98hw', (req, res) => {
         return res.send({ express: tempTokenData});
     });
 
@@ -100,7 +103,10 @@ app.use(function (err, req, res, next) {
 app.listen(port, () => console.log(`App listening on port ${port}!`));
 
 
-
+https.createServer(options, function (req, res) {
+    res.writeHead(200);
+    res.end("hello world\n");
+  }).listen(8000);
 
 
 //----------------------------AUTH--------------------------------------------------------------------
